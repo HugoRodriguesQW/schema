@@ -1,6 +1,6 @@
 {
   "name": "@hugorodriguesqw/mini-schema",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A proof of concept schema validator for javascript. It's quite usual.",
   "main": "schema.js",
   "scripts": {
