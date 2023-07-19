@@ -21,8 +21,5 @@
   "bugs": {
     "url": "https://github.com/HugoRodriguesQW/schema/issues"
   },
-  "homepage": "https://github.com/HugoRodriguesQW/schema#readme",
-  "dependencies": {
-    "@hugorodriguesqw/mini-schema": "^1.0.0"
-  }
+  "homepage": "https://github.com/HugoRodriguesQW/schema#readme"
 }
