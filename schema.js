@@ -109,3 +109,8 @@ const a = new Schema({
     },
   }),
 })
+
+export default {
+  Schema,
+  SchemaItem,
+}

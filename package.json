@@ -1,0 +1,28 @@
+{
+  "name": "@hugorodriguesqw/mini-schema",
+  "version": "1.0.0",
+  "description": "A proof of concept schema validator for javascript. It's quite usual.",
+  "main": "schema.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoRodriguesQW/schema.git"
+  },
+  "keywords": [
+    "schema",
+    "javascript",
+    "nodejs",
+    "validation"
+  ],
+  "author": "HugoRodriguesQW",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HugoRodriguesQW/schema/issues"
+  },
+  "homepage": "https://github.com/HugoRodriguesQW/schema#readme",
+  "dependencies": {
+    "@hugorodriguesqw/mini-schema": "^1.0.0"
+  }
+}
