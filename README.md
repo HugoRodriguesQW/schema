@@ -4,10 +4,30 @@ A proof of concept schema validator for javascript. It's quite usual, so much so
 
 <a id='usage'></a>
 
+#### #Instalation
+
+- using npm `npm install @hugorodriguesqw/mini-schema`
+
+```js
+import { Schema, SchemaItem } from '@hugorodriguesqw/mini-schema'
+```
+
+- using yarn `yarn install @hugorodriguesqw/mini-schema`
+
+```js
+import { Schema, SchemaItem } from '@hugorodriguesqw/mini-schema'
+```
+
+- using unpkg `https://unpkg.com/@hugorodriguesqw/mini-schema@latest/schema.js`
+
+```html
+<script src="https://unpkg.com/@hugorodriguesqw/mini-schema@latest/schema.js"></script>
+```
+
 #### #Usage
 
 ```js
-const schema = new Schema({ schema })
+const schema = new Schema({ ... SchemaItem ... })
 
 schema.validate({ data }).then().catch()
 ```
@@ -43,7 +63,7 @@ Each schematic item has its own configuration. It is passed in the `SchemaItem` 
 | **`instance`** | Boolean  |    false     |    false     |                         validate as instance |
 |  **`custom`**  | Function |      -       |    false     |          custom additional validate function |
 | **`defaults`** |   Any    |      -       |    false     |                    default value (same type) |
-| **`children`** |  Object  |      -       |    false     |     **Children of field (object or array) ** |
+| **`children`** |  Object  |      -       |    false     |          Children of field (object or array) |
 
 #### #Item. Type
 
