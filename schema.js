@@ -1,7 +1,19 @@
+/**
+ * Class to define a schema.
+ */
 class Schema {
+  /**
+   * @typedef {Object.<string, SchemaItem>} SchemaOptions
+   */
+
   static primitive = [Symbol, Number, Array, String, Boolean, Object]
 
+  /**
+   * @param {SchemaOptions} schema - Schema to be validated.
+   */
   constructor(schema) {
+    if (typeof schema !== 'object') throw new Error('invalid schema: ' + schema)
+
     for (const item in schema) {
       if (!SchemaItem.prototype.isPrototypeOf(schema[item])) {
         throw new Error('invalid SchemaItem: ' + item)
@@ -11,17 +23,30 @@ class Schema {
     }
   }
 
+  /**
+   * Validates the provided data against the schema.
+   * @param {Object} data - Data to be validated.
+   * @returns {Promise<Object>} - Returns a Promise with the validated data or rejects with information about the validation error.
+   */
   validate(data) {
+    if (typeof data !== 'object') throw new Error('invalid data: ' + data)
+
     return new Promise(async (resolve, reject) => {
       for (const t in { ...this }) {
         if (this.hasOwnProperty(t)) {
           const validator = this[t]
-          const parameter =
-            data[t] ?? (!validator.required && validator.defaults)
+          const parameter = data[t]
 
           if (validator.children) {
             if (!SchemaItem.prototype.isPrototypeOf(validator.children)) {
-              await new Schema(validator.children).validate(parameter)
+              await new Schema(validator.children)
+                .validate(parameter)
+                .then((children) => {
+                  Object.assign(parameter, children)
+                })
+                .catch((err) => {
+                  reject(err)
+                })
             }
           }
 
@@ -31,9 +56,9 @@ class Schema {
           }
 
           // VALIDATION: REQUIRED
-          if (validator.required && !parameter) {
+          if (validator.required && parameter == null) {
             return reject({ validator, parameter, reason: 'required' })
-          } else if (!data[t] && parameter) {
+          } else if (data[t] == null && parameter) {
             data[t] = parameter
           }
 
@@ -71,14 +96,30 @@ class Schema {
   }
 }
 
-class SchemaItem {
-  static required = { type: Boolean, required: false, defaults: true } // campo obrigatório?
-  static instance = { type: Boolean, required: false, defaults: false } // validar como instancia?
-  static custom = { type: Function, required: false } // usar validator personalizado?
-  static defaults = { required: false } // valor padrão?
-  static type = { required: false } // qual o tipo desse campo? (String, Schema, Object, Etc)
-  static children = { type: Object, required: false } // objeto filho ou array filha
+/**
+ * @typedef {Object} SchemaItemOptions
+ * @property {boolean} [required=false] - Indicates if the field is required.
+ * @property {boolean} [instance=false] - Indicates if the field should be validated as an instance of a class.
+ * @property {function(any):boolean} [custom] - Custom validation function for the field.
+ * @property {boolean} [defaults=false] - Default value for the field.
+ * @property {Function} [type] - Expected type for the field.
+ * @property {Object} [children] - Object defining properties of child fields.
+ */
 
+/**
+ * Class to define an item in the schema.
+ */
+class SchemaItem {
+  static required = { type: Boolean, required: false, defaults: true }
+  static instance = { type: Boolean, required: false, defaults: false }
+  static custom = { type: Function, required: false }
+  static defaults = { required: false }
+  static type = { required: false }
+  static children = { type: Object, required: false }
+
+  /**
+   * @param {SchemaItemOptions} options - Options to configure the schema item.
+   */
   constructor({ required, instance, custom, defaults, type, children }) {
     this.required = required ?? SchemaItem.required.defaults
     this.instance = instance ?? SchemaItem.instance.defaults
@@ -110,7 +151,7 @@ const a = new Schema({
   }),
 })
 
-export default {
+module.exports = {
   Schema,
   SchemaItem,
 }
