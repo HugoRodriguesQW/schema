@@ -1,24 +1,31 @@
 ## schema.js
 
+[![CI](https://github.com/HugoRodriguesQW/schema/actions/workflows/main.yml/badge.svg)](https://github.com/HugoRodriguesQW/schema/actions/workflows/main.yml)
+[![V](https://img.shields.io/npm/v/@hugorodriguesqw/mini-schema)](https://www.npmjs.com/package/@hugorodriguesqw/mini-schema)
+[![A](https://img.shields.io/github/commit-activity/m/hugorodriguesqw/schema)](https://github.com/HugoRodriguesQW/schema/graphs/commit-activity)
+[![P](https://img.shields.io/github/package-json/name/hugorodriguesqw/schema?label=npm&color=purple)](https://www.npmjs.com/package/@hugorodriguesqw/mini-schema)
+[![L](https://img.shields.io/github/package-json/license/hugorodriguesqw/schema?color=purple)](https://github.com/HugoRodriguesQW/schema/blob/main/LICENSE)
+[![C](https://img.shields.io/github/contributors/hugorodriguesqw/schema)](https://github.com/HugoRodriguesQW/schema/graphs/contributors)
+
 A proof of concept schema validator for javascript. It's quite usual, so much so that I'm using it as a validator for my neural network setup.
 
 <a id='usage'></a>
 
 #### #Instalation
 
-- using npm `npm install @hugorodriguesqw/mini-schema`
+- using npm:
 
-```js
-import { Schema, SchemaItem } from '@hugorodriguesqw/mini-schema'
+```
+npm install @hugorodriguesqw/mini-schema
 ```
 
-- using yarn `yarn install @hugorodriguesqw/mini-schema`
+- using yarn:
 
-```js
-import { Schema, SchemaItem } from '@hugorodriguesqw/mini-schema'
+```
+yarn install @hugorodriguesqw/mini-schema
 ```
 
-- using unpkg `https://unpkg.com/@hugorodriguesqw/mini-schema@latest/schema.js`
+- using unpkg:
 
 ```html
 <script src="https://unpkg.com/@hugorodriguesqw/mini-schema@latest/schema.js"></script>
@@ -27,6 +34,8 @@ import { Schema, SchemaItem } from '@hugorodriguesqw/mini-schema'
 #### #Usage
 
 ```js
+import {Schema, SchemaItem} from '@hugorodriguesqw/mini-schema'
+
 const schema = new Schema({ ... SchemaItem ... })
 
 schema.validate({ data }).then().catch()
