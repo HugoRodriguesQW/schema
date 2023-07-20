@@ -1,4 +1,4 @@
-## schema.js
+## mini-schema
 
 [![CI](https://github.com/HugoRodriguesQW/schema/actions/workflows/main.yml/badge.svg)](https://github.com/HugoRodriguesQW/schema/actions/workflows/main.yml)
 [![V](https://img.shields.io/npm/v/@hugorodriguesqw/mini-schema)](https://www.npmjs.com/package/@hugorodriguesqw/mini-schema)
