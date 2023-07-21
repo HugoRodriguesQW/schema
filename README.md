@@ -18,8 +18,6 @@ A schematic data validator for simple and flexible javascript. With it, it is po
 <br>
 <br>
 <br>
-<br>
-<br>
 
 #### Instalation with npm:
 ```
