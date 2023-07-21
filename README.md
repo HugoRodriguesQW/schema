@@ -1,23 +1,23 @@
-# mini-schema
-
 <p align='center'>
   <img align='left' src='https://opengraph.githubassets.com/a3642d38cacf06d3cde0f0c8307c5d9bb41d86300c663311c8c1990172c8db0f/HugoRodriguesQW/schema' width='50%'></img>
 </p>
 
+# mini-schema
+
 ### description
 
 A schematic data validator for simple and flexible javascript. With it, it is possible to validate and manage what happens when the fields do not meet the requirements of the schema. Available in npm.
+
+---
 
 [![CI](https://github.com/HugoRodriguesQW/schema/actions/workflows/main.yml/badge.svg)](https://github.com/HugoRodriguesQW/schema/actions/workflows/main.yml)
 [![V](https://img.shields.io/npm/v/@hugorodriguesqw/mini-schema)](https://www.npmjs.com/package/@hugorodriguesqw/mini-schema)
 [![A](https://img.shields.io/github/commit-activity/m/hugorodriguesqw/schema)](https://github.com/HugoRodriguesQW/schema/graphs/commit-activity)
 [![L](https://img.shields.io/github/package-json/license/hugorodriguesqw/schema?color=purple)](https://github.com/HugoRodriguesQW/schema/blob/main/LICENSE)
 
----
 
 <br>
-<br>
-<br>
+
 
 #### Instalation with npm:
 ```
