@@ -1,8 +1,6 @@
-<p align='center'>
-  <img align='left' src='https://opengraph.githubassets.com/a3642d38cacf06d3cde0f0c8307c5d9bb41d86300c663311c8c1990172c8db0f/HugoRodriguesQW/schema' width='50%'></img>
-</p>
 
-# mini-schema
+
+# mini-schema 🧀
 
 ### description
 
