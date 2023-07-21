@@ -1,6 +1,6 @@
 # mini-schema
 
-[<img align='left' src='https://opengraph.githubassets.com/a3642d38cacf06d3cde0f0c8307c5d9bb41d86300c663311c8c1990172c8db0f/HugoRodriguesQW/schema' width='460px'></img>](https://github.com/HugoRodriguesQW/schema)
+[<img align='left' src='https://opengraph.githubassets.com/a3642d38cacf06d3cde0f0c8307c5d9bb41d86300c663311c8c1990172c8db0f/HugoRodriguesQW/schema' width='43%'></img>](https://github.com/HugoRodriguesQW/schema)
 
 <p align='right'>
 <p align='top'>
@@ -15,6 +15,7 @@ A schematic data validator for simple and flexible javascript. With it, it is po
 [![P](https://img.shields.io/github/package-json/name/hugorodriguesqw/schema?label=npm&color=purple)](https://www.npmjs.com/package/@hugorodriguesqw/mini-schema)
 [![L](https://img.shields.io/github/package-json/license/hugorodriguesqw/schema?color=purple)](https://github.com/HugoRodriguesQW/schema/blob/main/LICENSE)
 [![C](https://img.shields.io/github/contributors/hugorodriguesqw/schema)](https://github.com/HugoRodriguesQW/schema/graphs/contributors)
+
 
 </p>
 </p>
