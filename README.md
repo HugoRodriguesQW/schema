@@ -7,9 +7,7 @@
 [![L](https://img.shields.io/github/package-json/license/hugorodriguesqw/schema?color=purple)](https://github.com/HugoRodriguesQW/schema/blob/main/LICENSE)
 [![C](https://img.shields.io/github/contributors/hugorodriguesqw/schema)](https://github.com/HugoRodriguesQW/schema/graphs/contributors)
 
-A proof of concept schema validator for javascript. It's quite usual, so much so that I'm using it as a validator for my neural network setup.
-
-<a id='usage'></a>
+A schematic data validator for simple and flexible javascript. With it, it is possible to validate and manage what happens when the fields do not meet the requirements of the schema. Available in npm.
 
 #### #Instalation
 
@@ -43,7 +41,7 @@ schema.validate({ data }).then().catch()
 
 #### #`Schema` Syntax
 
-Each item within the schema must be wrapped with a `SchemaItem` and configured using the [parameters found here](#usage) individually.
+Each item within the schema must be wrapped with a `SchemaItem` and configured using the [parameters found here](#parameters) individually.
 
 ```js
 const schema = new Schema({
@@ -61,6 +59,8 @@ schema.validate({
 })
 ```
 
+<a id='parameters'></a>
+
 ### #`SchemaItem` Configuration
 
 Each schematic item has its own configuration. It is passed in the `SchemaItem` constructor to generate a valid schematic item. Follow the valid settings below:
@@ -76,7 +76,7 @@ Each schematic item has its own configuration. It is passed in the `SchemaItem` 
 
 #### #Item. Type
 
-It defines the typing of the item in question. Generally, primitive constructors are used to validate them like Number, String, Symbol, Object, etc. Custom classes can also be used as per this example.
+It defines the typing of the item in question. Generally, primitive constructors are used to validate them like Number, String, Symbol, Object, etc. Custom classes can also be used.
 
 ```js
 const schema = new Schema({
